@@ -1,0 +1,33 @@
+﻿@model IEnumerable<EF_Practice.Marca>
+
+<p>
+    @Html.ActionLink("Create New", "Crear")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pais)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pais)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Editar", new { id=item.CodMarca }) |
+            @*@Html.ActionLink("Details", "Details", new { id=item.CodMarca }) |*@
+            @Html.ActionLink("Eliminar", "Eliminar", new { id=item.CodMarca })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,19 @@
+c:\users\carlos\documents\visual studio 2017\Projects\Practicando\EF_Practice\bin\Debug\EF_Practice.dll.config
+c:\users\carlos\documents\visual studio 2017\Projects\Practicando\EF_Practice\bin\Debug\EF_Practice.dll
+c:\users\carlos\documents\visual studio 2017\Projects\Practicando\EF_Practice\bin\Debug\EF_Practice.pdb
+c:\users\carlos\documents\visual studio 2017\Projects\Practicando\EF_Practice\bin\Debug\EntityFramework.dll
+c:\users\carlos\documents\visual studio 2017\Projects\Practicando\EF_Practice\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\carlos\documents\visual studio 2017\Projects\Practicando\EF_Practice\bin\Debug\EntityFramework.xml
+c:\users\carlos\documents\visual studio 2017\Projects\Practicando\EF_Practice\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\carlos\documents\visual studio 2017\Projects\Practicando\EF_Practice\obj\Debug\EF_Practice.dll
+c:\users\carlos\documents\visual studio 2017\Projects\Practicando\EF_Practice\obj\Debug\EF_Practice.pdb
+F:\Proyecto-master (1)\Practicando\EF_Practice\bin\Debug\EF_Practice.dll.config
+F:\Proyecto-master (1)\Practicando\EF_Practice\bin\Debug\EF_Practice.dll
+F:\Proyecto-master (1)\Practicando\EF_Practice\bin\Debug\EF_Practice.pdb
+F:\Proyecto-master (1)\Practicando\EF_Practice\bin\Debug\EntityFramework.dll
+F:\Proyecto-master (1)\Practicando\EF_Practice\bin\Debug\EntityFramework.SqlServer.dll
+F:\Proyecto-master (1)\Practicando\EF_Practice\bin\Debug\EntityFramework.xml
+F:\Proyecto-master (1)\Practicando\EF_Practice\bin\Debug\EntityFramework.SqlServer.xml
+F:\Proyecto-master (1)\Practicando\EF_Practice\obj\Debug\EF_Practice.csprojResolveAssemblyReference.cache
+F:\Proyecto-master (1)\Practicando\EF_Practice\obj\Debug\EF_Practice.dll
+F:\Proyecto-master (1)\Practicando\EF_Practice\obj\Debug\EF_Practice.pdb
