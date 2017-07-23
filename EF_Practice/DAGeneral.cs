@@ -35,7 +35,6 @@ namespace EF_Practice
 
             return exito;
         }
-
         static public bool ActualizarMarca(Marca Marca)
         {
             bool exito = true;
@@ -79,5 +78,78 @@ namespace EF_Practice
             return exito;
         }
 
+
+        static public List<Modelo> listadoModelo()
+        {
+            List<Modelo> listado = new List<Modelo>();
+            using (var data = new BDAlquilerVehiculoEntities())
+            {
+                return data.Modelo.ToList();
+            }
+        }
+        static public bool RegistrarModelo(Modelo Modelo)
+        {
+            bool exito = true;
+            try
+            {
+                using (var data = new BDAlquilerVehiculoEntities())
+                {
+                    data.Modelo.Add(Modelo);
+                    data.SaveChanges();
+                }
+            }
+            catch
+            {
+
+                exito = false;
+            }
+
+            return exito;
+        }
+        static public bool ActualizarModelo(Modelo Modelo)
+        {
+            bool exito = true;
+            try
+            {
+                using (var data = new BDAlquilerVehiculoEntities())
+                {
+                    Modelo actual = data.Modelo.Where(x => x.CodModelo == Modelo.CodModelo).FirstOrDefault();
+                    actual.CodModelo = Modelo.CodModelo;
+                    actual.Descripcion = Modelo.Descripcion;
+                    actual.Puertas = Modelo.Puertas;
+                    actual.Precio = Modelo.Precio;
+                    actual.CodMarca = Modelo.CodMarca;
+                    
+                    data.SaveChanges();
+                }
+
+            }
+            catch (Exception)
+            {
+
+                exito = false;
+            }
+            return exito;
+        }
+        static public bool EliminarModelo(Modelo Modelo)
+        {
+            bool exito = true;
+            try
+            {
+                using (var data = new BDAlquilerVehiculoEntities())
+                {
+                    Modelo actual = data.Modelo.Where(x => x.CodModelo == Modelo.CodModelo).FirstOrDefault();
+                    data.Modelo.Remove(actual);
+                    data.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+
+                exito = false;
+            }
+            return exito;
+        }
     }
+
 }

@@ -17,3 +17,12 @@ F:\Proyecto-master (1)\Practicando\EF_Practice\bin\Debug\EntityFramework.SqlServ
 F:\Proyecto-master (1)\Practicando\EF_Practice\obj\Debug\EF_Practice.csprojResolveAssemblyReference.cache
 F:\Proyecto-master (1)\Practicando\EF_Practice\obj\Debug\EF_Practice.dll
 F:\Proyecto-master (1)\Practicando\EF_Practice\obj\Debug\EF_Practice.pdb
+C:\Users\Carlos\Desktop\Proyecto-master\Practicando\EF_Practice\bin\Debug\EF_Practice.dll.config
+C:\Users\Carlos\Desktop\Proyecto-master\Practicando\EF_Practice\bin\Debug\EF_Practice.dll
+C:\Users\Carlos\Desktop\Proyecto-master\Practicando\EF_Practice\bin\Debug\EF_Practice.pdb
+C:\Users\Carlos\Desktop\Proyecto-master\Practicando\EF_Practice\bin\Debug\EntityFramework.dll
+C:\Users\Carlos\Desktop\Proyecto-master\Practicando\EF_Practice\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Carlos\Desktop\Proyecto-master\Practicando\EF_Practice\bin\Debug\EntityFramework.xml
+C:\Users\Carlos\Desktop\Proyecto-master\Practicando\EF_Practice\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Carlos\Desktop\Proyecto-master\Practicando\EF_Practice\obj\Debug\EF_Practice.dll
+C:\Users\Carlos\Desktop\Proyecto-master\Practicando\EF_Practice\obj\Debug\EF_Practice.pdb

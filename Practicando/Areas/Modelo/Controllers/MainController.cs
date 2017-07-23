@@ -5,11 +5,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Practicando.Areas.Marca.Controllers
+namespace Practicando.Areas.Modelo.Controllers
 {
     public class MainController : Controller
     {
-        // GET: Marca/Main
+        // GET: Modelo/Main
         public ActionResult Index()
         {
             return View();
@@ -17,25 +17,26 @@ namespace Practicando.Areas.Marca.Controllers
         public ActionResult Listado()
 
         {
-            return PartialView(DAGeneral.listadoMarca());
+            ViewBag.ListadoMarca = DAGeneral.listadoMarca();
+            return PartialView(DAGeneral.listadoModelo());
         }
 
         public ActionResult Eliminar(string ID)
         {
-            EF_Practice.Marca marca = DAGeneral.listadoMarca().Where(x => x.CodMarca == ID).FirstOrDefault();
-            bool exito = DAGeneral.EliminarMarca(marca);
+            EF_Practice.Modelo Modelo = DAGeneral.listadoModelo().Where(x => x.CodModelo == ID).FirstOrDefault();
+            bool exito = DAGeneral.EliminarModelo(Modelo);
             return RedirectToAction("Index");
         }
 
         public ActionResult Editar(string ID)
         {
-            EF_Practice.Marca marca = DAGeneral.listadoMarca().Where(x => x.CodMarca == ID).FirstOrDefault();
-            return View(marca);
+            EF_Practice.Modelo Modelo = DAGeneral.listadoModelo().Where(x => x.CodModelo == ID).FirstOrDefault();
+            return View(Modelo);
         }
         [HttpPost]
-        public ActionResult Editar(EF_Practice.Marca marca)
+        public ActionResult Editar(EF_Practice.Modelo Modelo)
         {
-            bool exito = DAGeneral.ActualizarMarca(marca);
+            bool exito = DAGeneral.ActualizarModelo(Modelo);
             return RedirectToAction("Index");
         }
 
@@ -44,11 +45,10 @@ namespace Practicando.Areas.Marca.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Crear(EF_Practice.Marca marca)
+        public ActionResult Crear(EF_Practice.Modelo Modelo)
         {
-            bool exito = DAGeneral.RegistrarMarca(marca);
+            bool exito = DAGeneral.RegistrarModelo(Modelo);
             return RedirectToAction("Index");
         }
-
     }
 }

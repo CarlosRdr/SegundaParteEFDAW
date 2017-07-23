@@ -1,23 +1,22 @@
 ﻿using System.Web.Mvc;
 
-
-namespace Practicando.Areas.Marca
+namespace Practicando.Areas.Modelo
 {
-    public class MarcaAreaRegistration : AreaRegistration 
+    public class ModeloAreaRegistration : AreaRegistration 
     {
         public override string AreaName 
         {
             get 
             {
-                return "Marca";
+                return "Modelo";
             }
         }
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
             context.MapRoute(
-                "Marca_default",
-                "Marca/{controller}/{action}/{id}",
+                "Modelo_default",
+                "Modelo/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional }
             );
         }
