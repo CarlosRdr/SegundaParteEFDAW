@@ -193,6 +193,9 @@
     <Content Include="Areas\Reserva\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Reserva\Views\Main\Index.cshtml" />
     <Content Include="Areas\Reserva\Views\Main\ListReserva.cshtml" />
+    <Content Include="Areas\Reserva\Views\Main\Editar.cshtml" />
+    <Content Include="Areas\Reserva\Views\Main\Crear.cshtml" />
+    <Content Include="Areas\Reserva\Views\Main\Eliminar.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

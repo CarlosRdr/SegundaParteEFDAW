@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<EF_Practice.Reserva>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear", "Crear")
 </p>
 <table class="table">
     <tr>
@@ -47,9 +47,8 @@
             @Html.DisplayFor(modelItem => item.CodVehiculo)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CodReserva }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CodReserva }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CodReserva })
+            @Html.ActionLink("Editar", "Editar", new { id=item.CodReserva }) |
+            @Html.ActionLink("Eliminar", "Eliminar", new { id=item.CodReserva })
         </td>
     </tr>
 }
