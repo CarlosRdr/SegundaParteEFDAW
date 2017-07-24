@@ -1,7 +1,9 @@
 ﻿@model EF_Practice.Marca
-
+@using EF_Practice;
 @{
     ViewBag.Title = "Crear";
+    List<Marca> ListaMarca = (List<Marca>)ViewBag.ListadoMarcas;
+    var NuevoID = ListaMarca.Max(x => Convert.ToInt32( x.CodMarca.Remove(0,2))) + 1;
 }
 
 <h2>Crear</h2>
@@ -17,7 +19,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.CodMarca, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.CodMarca, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.CodMarca, new { htmlAttributes = new { @class = "form-control", @Value ="MA0"+ NuevoID, @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.CodMarca, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -40,7 +42,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Guardar" class="btn btn-default" />
             </div>
         </div>
     </div>

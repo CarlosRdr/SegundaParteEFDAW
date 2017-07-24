@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista de Vehiculos</h2>
+<input type="button" class="btn btn-success" value="Cargar Vehiculos" id="btnCargarVehiculos" onclick="CargarListadoVehiculos();" />
+<br />
+<br />
+<div id="divListadoVehiculos">
+
+</div>
+<script>
+    function CargarListadoVehiculos() {
+        $.ajax({
+            type: "POST",
+            url: "/Vehiculos/Main/Listado",
+            success: function (html) {
+                $("#divListadoVehiculos").html(html);
+            }
+        });
+    }
+</script>
+

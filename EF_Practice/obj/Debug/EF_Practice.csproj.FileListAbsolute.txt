@@ -36,3 +36,13 @@ D:\GitHub\SegundaParteEFDAW\EF_Practice\bin\Debug\EntityFramework.SqlServer.xml
 D:\GitHub\SegundaParteEFDAW\EF_Practice\obj\Debug\EF_Practice.csprojResolveAssemblyReference.cache
 D:\GitHub\SegundaParteEFDAW\EF_Practice\obj\Debug\EF_Practice.dll
 D:\GitHub\SegundaParteEFDAW\EF_Practice\obj\Debug\EF_Practice.pdb
+C:\Users\Carlos\Source\Repos\SegundaParteEFDAW2\EF_Practice\bin\Debug\EF_Practice.dll.config
+C:\Users\Carlos\Source\Repos\SegundaParteEFDAW2\EF_Practice\bin\Debug\EF_Practice.dll
+C:\Users\Carlos\Source\Repos\SegundaParteEFDAW2\EF_Practice\bin\Debug\EF_Practice.pdb
+C:\Users\Carlos\Source\Repos\SegundaParteEFDAW2\EF_Practice\bin\Debug\EntityFramework.dll
+C:\Users\Carlos\Source\Repos\SegundaParteEFDAW2\EF_Practice\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Carlos\Source\Repos\SegundaParteEFDAW2\EF_Practice\bin\Debug\EntityFramework.xml
+C:\Users\Carlos\Source\Repos\SegundaParteEFDAW2\EF_Practice\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Carlos\Source\Repos\SegundaParteEFDAW2\EF_Practice\obj\Debug\EF_Practice.csprojResolveAssemblyReference.cache
+C:\Users\Carlos\Source\Repos\SegundaParteEFDAW2\EF_Practice\obj\Debug\EF_Practice.dll
+C:\Users\Carlos\Source\Repos\SegundaParteEFDAW2\EF_Practice\obj\Debug\EF_Practice.pdb

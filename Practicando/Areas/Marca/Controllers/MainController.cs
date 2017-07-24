@@ -41,6 +41,7 @@ namespace Practicando.Areas.Marca.Controllers
 
         public ActionResult Crear()
         {
+            ViewBag.ListadoMarcas = DAGeneral.listadoMarca();
             return View();
         }
         [HttpPost]

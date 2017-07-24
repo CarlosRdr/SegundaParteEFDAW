@@ -1,0 +1,59 @@
+﻿@model IEnumerable<EF_Practice.Vehiculo>
+@using EF_Practice;
+@{
+    List<Modelo> ListaModelo = (List<Modelo>)ViewBag.ListadoModelo;
+}
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Placa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Disponible)
+        </th>
+        <th>
+            Modelo
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Placa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Disponible)
+        </td>
+        <td>
+            @foreach (Modelo item2 in ListaModelo.Where(x => x.CodModelo == item.CodModelo).ToList())
+                {
+                @item2.Descripcion
+
+            }
+            
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Editar", new { id=item.CodVehiculo }) |
+            @*@Html.ActionLink("Details", "Details", new { id=item.CodVehiculo }) |*@
+            @Html.ActionLink("Eliminar", "Eliminar", new { id=item.CodVehiculo })
+        </td>
+    </tr>
+}
+
+</table>

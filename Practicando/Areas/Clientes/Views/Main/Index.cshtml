@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista de Clientes</h2>
+<input type="button" class="btn btn-success" value="Cargar Clientes" id="btnCargarClientes" onclick="CargarListadoClientes();" />
+<br />
+<br />
+<div id="divListadoClientes">
+
+</div>
+<script>
+    function CargarListadoClientes() {
+        $.ajax({
+            type: "POST",
+            url: "/Clientes/Main/Listado",
+            success: function (html) {
+                $("#divListadoClientes").html(html);
+            }
+        });
+    }
+</script>
+

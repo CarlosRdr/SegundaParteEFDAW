@@ -147,12 +147,16 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Clientes\ClientesAreaRegistration.cs" />
+    <Compile Include="Areas\Clientes\Controllers\MainController.cs" />
     <Compile Include="Areas\Marca\Controllers\MainController.cs" />
     <Compile Include="Areas\Marca\MarcaAreaRegistration.cs" />
     <Compile Include="Areas\Modelo\Controllers\MainController.cs" />
     <Compile Include="Areas\Modelo\ModeloAreaRegistration.cs" />
     <Compile Include="Areas\Reserva\Controllers\MainController.cs" />
     <Compile Include="Areas\Reserva\ReservaAreaRegistration.cs" />
+    <Compile Include="Areas\Vehiculos\Controllers\MainController.cs" />
+    <Compile Include="Areas\Vehiculos\VehiculosAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -196,6 +200,22 @@
     <Content Include="Areas\Reserva\Views\Main\Editar.cshtml" />
     <Content Include="Areas\Reserva\Views\Main\Crear.cshtml" />
     <Content Include="Areas\Reserva\Views\Main\Eliminar.cshtml" />
+    <Content Include="Areas\Clientes\Views\web.config" />
+    <Content Include="Areas\Clientes\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Clientes\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Clientes\Views\Main\Listado.cshtml" />
+    <Content Include="Areas\Clientes\Views\Main\Eliminar.cshtml" />
+    <Content Include="Areas\Clientes\Views\Main\Editar.cshtml" />
+    <Content Include="Areas\Clientes\Views\Main\Crear.cshtml" />
+    <Content Include="Areas\Vehiculos\Views\web.config" />
+    <Content Include="Areas\Vehiculos\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Vehiculos\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Vehiculos\Views\Main\Listado.cshtml" />
+    <Content Include="Areas\Vehiculos\Views\Main\Index.cshtml" />
+    <Content Include="Areas\Clientes\Views\Main\Index.cshtml" />
+    <Content Include="Areas\Vehiculos\Views\Main\Eliminar.cshtml" />
+    <Content Include="Areas\Vehiculos\Views\Main\Editar.cshtml" />
+    <Content Include="Areas\Vehiculos\Views\Main\Crear.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -224,9 +244,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Clientes\Models\" />
     <Folder Include="Areas\Marca\Models\" />
     <Folder Include="Areas\Modelo\Models\" />
     <Folder Include="Areas\Reserva\Models\" />
+    <Folder Include="Areas\Vehiculos\Models\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

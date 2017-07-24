@@ -42,6 +42,7 @@ namespace Practicando.Areas.Modelo.Controllers
 
         public ActionResult Crear()
         {
+            ViewBag.ListadoModelos = DAGeneral.listadoModelo();
             return View();
         }
         [HttpPost]

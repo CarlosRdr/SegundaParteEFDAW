@@ -232,7 +232,6 @@ namespace EF_Practice
                 return data.Cliente.ToList();
             }
         }
-
         static public bool RegistrarCliente(Cliente cliente)
         {
             bool exito = true;
@@ -252,7 +251,6 @@ namespace EF_Practice
 
             return exito;
         }
-
         static public bool ActualizarCliente(Cliente cliente)
         {
             bool exito = true;
@@ -283,7 +281,6 @@ namespace EF_Practice
             }
             return exito;
         }
-
         static public bool EliminarCliente(Cliente cliente)
         {
             bool exito = true;
@@ -312,7 +309,6 @@ namespace EF_Practice
                 return data.Vehiculo.ToList();
             }
         }
-
         static public bool RegistrarVehiculo(Vehiculo vehiculo)
         {
             bool exito = true;
@@ -332,7 +328,6 @@ namespace EF_Practice
 
             return exito;
         }
-
         static public bool ActualizarVehiculo(Vehiculo vehiculo)
         {
             bool exito = true;
