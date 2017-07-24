@@ -11,13 +11,19 @@ namespace EF_Practice
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Reserva
     {
         public int CodReserva { get; set; }
         public string CodVehiculo { get; set; }
         public string CodCliente { get; set; }
+        [Required]
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public Nullable<System.DateTime> FechaReserva { get; set; }
+        [Required]
+        [DataType(DataType.Currency)]
         public Nullable<decimal> Precio { get; set; }
         public Nullable<int> NroDias { get; set; }
         public Nullable<int> NroRetraso { get; set; }

@@ -5,15 +5,27 @@
 
 <h2>Index</h2>
 
-@Scripts.Render("~/JS/Reserva.js")
-
-<h2>Noticias</h2>
-<body onload="CargarListdadoReserva();">
-</body>
+@*<body onload="CargarListdadoReserva();">
+</body>*@
 
 <br />
 <br />
-
+<input type="button" class="btn btn-success" value="Cargar Reservas" id="btnCargarReserva" onclick="CargarListadoReserva();" />
+<br />
+<br />
 <div id="divListadoReserva">
 
 </div>
+<script>
+
+    function CargarListadoReserva() {
+        $.ajax({
+            type: "POST",
+            url: "/Reserva/Main/ListReserva",
+            success: function (html) {
+                $("#divListadoReserva").html(html);
+            }
+        });
+    }
+
+</script>

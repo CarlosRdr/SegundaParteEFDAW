@@ -8,3 +8,13 @@
         }
     });
 }
+function CargarListdadoReservas() {
+    $.ajax({
+     
+        type: "POST",
+        url: "ListReserva",
+        success: function (html) {
+            $("#divListadoReserva").html(html);
+        }
+    });
+}

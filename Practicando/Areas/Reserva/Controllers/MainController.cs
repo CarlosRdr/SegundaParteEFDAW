@@ -49,7 +49,7 @@ namespace Practicando.Areas.Reserva.Controllers
         {
             EF_Practice.Reserva Reserva = DAGeneral.listadoReserva().Where(x => x.CodReserva == ID).FirstOrDefault();
             bool exito = DAGeneral.EliminarReserva(Reserva);
-            return RedirectToAction("Reservas");
+            return RedirectToAction("Index");
         }
 
     }
