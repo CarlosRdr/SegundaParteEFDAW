@@ -223,6 +223,160 @@ namespace EF_Practice
             }
             return exito;
         }
+
+        static public List<Cliente> listadoCliente()
+        {
+            List<Cliente> listado = new List<Cliente>();
+            using (var data = new BDAlquilerVehiculoEntities())
+            {
+                return data.Cliente.ToList();
+            }
+        }
+
+        static public bool RegistrarCliente(Cliente cliente)
+        {
+            bool exito = true;
+            try
+            {
+                using (var data = new BDAlquilerVehiculoEntities())
+                {
+                    data.Cliente.Add(cliente);
+                    data.SaveChanges();
+                }
+            }
+            catch
+            {
+
+                exito = false;
+            }
+
+            return exito;
+        }
+
+        static public bool ActualizarCliente(Cliente cliente)
+        {
+            bool exito = true;
+            try
+            {
+                using (var data = new BDAlquilerVehiculoEntities())
+                {
+                    Cliente actual = data.Cliente.Where(x => x.CodCliente == cliente.CodCliente).FirstOrDefault();
+                    actual.CodCliente = cliente.CodCliente;
+                    actual.ApePaterno = cliente.ApePaterno;
+                    actual.ApeMaterno = cliente.ApeMaterno;
+                    actual.Nombres = cliente.Nombres;
+                    actual.FechaNacimiento = cliente.FechaNacimiento;
+                    actual.Edad = cliente.Edad;
+                    actual.Calle = cliente.Calle;
+                    actual.Pais = cliente.Pais;
+                    actual.Departamento = cliente.Departamento;
+                    actual.Provincia = cliente.Provincia;
+                    actual.Distrito = cliente.Distrito;
+                    data.SaveChanges();
+                }
+
+            }
+            catch (Exception)
+            {
+
+                exito = false;
+            }
+            return exito;
+        }
+
+        static public bool EliminarCliente(Cliente cliente)
+        {
+            bool exito = true;
+            try
+            {
+                using (var data = new BDAlquilerVehiculoEntities())
+                {
+                    Cliente actual = data.Cliente.Where(x => x.CodCliente == cliente.CodCliente).FirstOrDefault();
+                    data.Cliente.Remove(actual);
+                    data.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+
+                exito = false;
+            }
+            return exito;
+        }
+
+        static public List<Vehiculo> listadoVehiculo()
+        {
+            List<Vehiculo> listado = new List<Vehiculo>();
+            using (var data = new BDAlquilerVehiculoEntities())
+            {
+                return data.Vehiculo.ToList();
+            }
+        }
+
+        static public bool RegistrarVehiculo(Vehiculo vehiculo)
+        {
+            bool exito = true;
+            try
+            {
+                using (var data = new BDAlquilerVehiculoEntities())
+                {
+                    data.Vehiculo.Add(vehiculo);
+                    data.SaveChanges();
+                }
+            }
+            catch
+            {
+
+                exito = false;
+            }
+
+            return exito;
+        }
+
+        static public bool ActualizarVehiculo(Vehiculo vehiculo)
+        {
+            bool exito = true;
+            try
+            {
+                using (var data = new BDAlquilerVehiculoEntities())
+                {
+                    Vehiculo actual = data.Vehiculo.Where(x => x.CodVehiculo == vehiculo.CodVehiculo).FirstOrDefault();
+                    actual.CodVehiculo = vehiculo.CodVehiculo;
+                    actual.Descripcion = vehiculo.Descripcion;
+                    actual.Placa = vehiculo.Placa;
+                    actual.Color = vehiculo.Color;
+                    actual.CodModelo = vehiculo.CodModelo;
+                    actual.Disponible = vehiculo.Disponible;
+                    data.SaveChanges();
+                }
+
+            }
+            catch (Exception)
+            {
+
+                exito = false;
+            }
+            return exito;
+        }
+        static public bool EliminarVehiculo(Vehiculo vehiculo)
+        {
+            bool exito = true;
+            try
+            {
+                using (var data = new BDAlquilerVehiculoEntities())
+                {
+                    Vehiculo actual = data.Vehiculo.Where(x => x.CodVehiculo == vehiculo.CodVehiculo).FirstOrDefault();
+                    data.Vehiculo.Remove(actual);
+                    data.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+
+                exito = false;
+            }
+            return exito;
+        }
     }
 
 }
