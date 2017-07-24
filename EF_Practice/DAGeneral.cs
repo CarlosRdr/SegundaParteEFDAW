@@ -150,6 +150,79 @@ namespace EF_Practice
             }
             return exito;
         }
+
+        static public List<Reserva> listadoReserva()
+        {
+            List<Reserva> listado = new List<Reserva>();
+            using (var data = new BDAlquilerVehiculoEntities())
+            {
+                return data.Reserva.ToList();
+            }
+        }
+        static public bool RegistrarReserva(Reserva Reserva)
+        {
+            bool exito = true;
+            try
+            {
+                using (var data = new BDAlquilerVehiculoEntities())
+                {
+                    data.Reserva.Add(Reserva);
+                    data.SaveChanges();
+                }
+            }
+            catch
+            {
+
+                exito = false;
+            }
+
+            return exito;
+        }
+        static public bool ActualizarReserva(Reserva Reserva)
+        {
+            bool exito = true;
+            try
+            {
+                using (var data = new BDAlquilerVehiculoEntities())
+                {
+                    Reserva actual = data.Reserva.Where(x => x.CodReserva == Reserva.CodReserva).FirstOrDefault();
+                    actual.CodCliente = Reserva.CodCliente;
+                    actual.CodVehiculo = Reserva.CodVehiculo;
+                    actual.FechaReserva = Reserva.FechaReserva;
+                    actual.Precio = Reserva.Precio;
+                    actual.NroDias = Reserva.NroDias;
+                    actual.NroRetraso = Reserva.NroRetraso;
+
+                    data.SaveChanges();
+                }
+
+            }
+            catch (Exception)
+            {
+
+                exito = false;
+            }
+            return exito;
+        }
+        static public bool EliminarReserva(Reserva Reserva)
+        {
+            bool exito = true;
+            try
+            {
+                using (var data = new BDAlquilerVehiculoEntities())
+                {
+                    Reserva actual = data.Reserva.Where(x => x.CodReserva == Reserva.CodReserva).FirstOrDefault();
+                    data.Reserva.Remove(actual);
+                    data.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+
+                exito = false;
+            }
+            return exito;
+        }
     }
 
 }

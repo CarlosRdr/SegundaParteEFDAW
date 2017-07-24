@@ -151,6 +151,8 @@
     <Compile Include="Areas\Marca\MarcaAreaRegistration.cs" />
     <Compile Include="Areas\Modelo\Controllers\MainController.cs" />
     <Compile Include="Areas\Modelo\ModeloAreaRegistration.cs" />
+    <Compile Include="Areas\Reserva\Controllers\MainController.cs" />
+    <Compile Include="Areas\Reserva\ReservaAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -164,6 +166,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="JS\Reserva.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -185,6 +188,11 @@
     <Content Include="Areas\Modelo\Views\Main\Eliminar.cshtml" />
     <Content Include="Areas\Modelo\Views\Main\Editar.cshtml" />
     <Content Include="Areas\Modelo\Views\Main\Crear.cshtml" />
+    <Content Include="Areas\Reserva\Views\web.config" />
+    <Content Include="Areas\Reserva\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Reserva\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Reserva\Views\Main\Index.cshtml" />
+    <Content Include="Areas\Reserva\Views\Main\ListReserva.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -215,6 +223,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Marca\Models\" />
     <Folder Include="Areas\Modelo\Models\" />
+    <Folder Include="Areas\Reserva\Models\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

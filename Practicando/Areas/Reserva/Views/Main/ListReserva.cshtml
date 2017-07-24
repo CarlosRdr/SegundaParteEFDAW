@@ -1,0 +1,57 @@
+﻿@model IEnumerable<EF_Practice.Reserva>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaReserva)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Precio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NroDias)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NroRetraso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodVehiculo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaReserva)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Precio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NroDias)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NroRetraso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodVehiculo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CodReserva }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CodReserva }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CodReserva })
+        </td>
+    </tr>
+}
+
+</table>
